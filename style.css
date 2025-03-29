@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap");
+
+body {
+    background-image: url("./images/walls/1-totoro.jpg");
+    font-family: "Inter Tight", sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#mainLogo {
+    position: fixed;
+    height: 1.2em;
+    top: 2em;
+    left: 2em;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+.tab {
+    font-family: "Protest Guerrilla";
+    font-size: 2em;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    padding: 10px 30px;
+}
+
+#tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4em;
+    color: #5389d4;
+}
+
+.tabicons{
+    height: 1.2em;
+}
+
+.playpausesettings img{
+    height: 2em;
+}
+
+.tab svg {
+    display: block;
+    width: 1em; /* Adjust size as needed */
+    height: 1em; /* Adjust size as needed */
+}
+
+.tab:hover {
+    background-color: #ffffff23;
+}
+
+.active-tab {
+    background-color: #497bbe;
+}
+.active-tab:hover {
+    background-color: #4887da;
+}
+
+.content {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.active-content {
+    display: block;
+    opacity: 1;
+}
+
+.timer {
+    font-size: 14em;
+    user-select: none;
+    text-shadow: 2px 2px 4px #7e7e7e;
+    margin: 20px;
+    margin-bottom: -15px;
+    font-weight: bold;
+}
+
+.button {
+    user-select: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #33333300;
+    color: white;
+    border: none;
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1.3em;
+    transition: background-color 0.3s;
+}
+
+.button:outline{
+    outline: none;
+}
+
+
+.reset {
+    rotate: 60deg;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000e3;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 15px rgba(23, 29, 49, 0.5);
+    text-align: left;
+    font-size: 1.2em;
+}
+
+#popup input,
+#popup select {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: #1e243173;
+    margin: 3px 0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+
+    font-size: 1em;
+    width: 175px;
+}
+
+#text {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 50%;
+    padding: 10px;
+    background-color: #1e2431;
+    color: white;
+    border: 1px solid steelblue;
+    border-radius: 4px;
+    height: 100%;
+    overflow-y: scroll; /* Enable scrolling for more than 8 items */
+}
+
+#popup option {
+    border: 1px solid red;
+    width: 100%;
+    max-height: 225px;
+    background-color: #1e2b48;
+    overflow-y: auto;
+    z-index: 1;
+    scroll-behavior: smooth;
+    border: none;
+}
+
+#popup h3 {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#popup button {
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#notificationPopup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#closebtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    background-color: #b7131300;
+    transition: background-color, color 0.3s;
+}
+
+#closebtn:hover {
+    color: tomato;
+}
+
+#fullscreenBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #33333300;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    transition:all 1s;
+}
+
+#applaybtn {
+    margin-top: 20px;
+    align-items: flex-end;
+    font-size: 1.1em;
+    font-weight: 200;
+    background-color: #4683b4a2;
+}
+
+#applaybtn:hover {
+    background-color: #4683b4e0;
+}
+
+/* Assuming #applaybtn is a child of a container that should be a flexbox */
+.container {
+    /* Add a container class if not already present */
+    display: flex;
+    justify-content: flex-end; /* Align children to the right */
+    margin-top: 20px; /* Add margin if needed */
+}
+
+#applaybtn {
+    font-size: 1.1em;
+    font-weight: 200;
+    background-color: #4683b4a2;
+    margin-left: 10px; /* Optional: Add some space from other elements */
+}
+
+#applaybtn:hover {
+    background-color: #4683b4e0;
+}
+
+#stopSoundBtn {
+    position: absolute;
+    background-color: #ffd01652;
+    bottom: 10%;
+    left: 46%;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 3em;
+    margin: 0;
+}
+
+#stopSoundBtn:hover {
+    background-color: #45ff1652;
+}
+
+@media screen and (max-width: 850px) {
+    .timer {
+        font-size: 10em;
+    }
+
+    #stopSoundBtn {
+        left: 40%;
+        padding: 0.3em;
+        border-radius: 6px;
+    }
+
+    #popup {
+        font-size: 1em;
+        min-width: 270px;
+    }
+
+    #popup input,
+    #popup select {
+        width: 175px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .timer {
+        font-size: 8em;
+    }
+
+    .tab {
+        font-size: 1.3em;
+    }
+
+    #stopSoundBtn {
+        bottom: 15%;
+        left: 35%;
+        border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

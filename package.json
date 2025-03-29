@@ -1,0 +1,35 @@
+{
+  "name": "otakudoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sumit Kumar Jha",
+  "email": "sumitzha2057@gmail.com",
+  "homepage": "https://github.com/zhasumit/otakudoro",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "https://otakudoro.vercel.app/",
+    "productName": "Otakudoro",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Productivity",
+      "maintainer": "Sumit Kumar Jha <sumitzha2057@gmail.com>"
+    }
+  }
+}

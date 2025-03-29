@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>otakudoro</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="./images/Group 72 (3).png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <img src="images/Group 75 (4).png" alt="logo" id="mainLogo" />
+
+        <main>
+            <div id="tabs">
+                <div id="tab1" class="tab active-tab">Work
+                    <img src="images/fire.svg" class="tabicons">
+                </div>
+                <div id="tab2" class="tab">Break
+                    <img src="images/cake.svg" class="tabicons">
+                </div>
+            </div>
+
+            <div id="content1" class="content active-content">
+                <div class="timer" id="timer1">40:00</div>
+                <div class="settingsWrapper">
+                    <button
+                        class="button playpausesettings"
+                        onclick="startTimer(1); stopNotificationSound()"
+                    >
+                        <img src="images/play-svgrepo-com.svg">
+                    </button>
+                    <button
+                        class="button reset playpausesettings"
+                        onclick="resetTimer(1); stopNotificationSound()"
+                    >
+                        <img src="images/restart.svg">
+                    </button>
+                    <button class="button playpausesettings" onclick="stopTimer(1)">
+                        <img src="images/pause.svg">
+                    </button>
+                    <button class="button playpausesettings" onclick="openSettings()">
+                        <img src="images/cog.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div id="content2" class="content">
+                <div class="timer" id="timer2">20:00</div>
+                <div class="settingsWrapper">
+                    <button
+                        class="button playpausesettings"
+                        onclick="startTimer(2); stopNotificationSound()"
+                    >
+                        <img src="images/play-svgrepo-com.svg">
+                    </button>
+                    <button
+                        class="button reset playpausesettings"
+                        onclick="resetTimer(2); stopNotificationSound()"
+                    >
+                        <img src="images/restart.svg">
+                    </button>
+                    <button class="button playpausesettings" onclick="stopTimer(2)">
+                        <img src="images/pause.svg ">
+                    </button>
+                    <button class="button playpausesettings" onclick="openSettings()">
+                        <img src="images/cog.svg">
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div id="popup">
+            <h3>Settings</h3>
+            <label id="text" for="timer1Duration">WORK:</label>
+            <input
+                min="1"
+                max="120"
+                type="number"
+                id="timer1Duration"
+                value="40"
+            /><br />
+            <label id="text" for="timer2Duration">BREAK :</label>
+            <input
+                min="0.5"
+                type="number"
+                id="timer2Duration"
+                value="20"
+            /><br />
+
+            <!-- Background selection dropdown -->
+            <label id="text" for="bgImage">Background:</label>
+            <select id="bgImage">
+                <option value="./images/walls/1-totoro.jpg">Totoro</option>
+                <option value="./images/walls/2-luffy.png">Luffy</option>
+                <option value="./images/walls/2-naruto.jpg">Naruto</option>
+                <option value="./images/walls/3-asta.jpg">Asta</option>
+                <option value="./images/walls/4-bluenight.jpg">
+                    Blue Night
+                </option>
+                <option value="./images/walls/5-zenitsu-ready.jpg">
+                    Zenitsu
+                </option>
+                <option value="./images/walls/6-Itachi.jpg">Itachi</option>
+                <option value="./images/walls/7-kempachi.jpg">Kempachi</option>
+                <option value="./images/walls/8-Levi.jpg">Levi</option>
+                <option value="./images/walls/9-Madara.jpg">Madara</option>
+                <option value="./images/walls/10-AOT.jpg">Mikasa</option>
+                <option value="./images/walls/11-deku.jpg">Deku</option>
+                <option value="./images/walls/12-Gojo.png">Gojo</option>
+                <option value="./images/walls/13-goku.jpg">Goku</option>
+                <option value="./images/walls/14-spiritedAway.jpg">
+                    Spirited Away
+                </option>
+                <option value="./images/walls/15-Yuji.jpg">Yuji</option>
+                <option value="./images/walls/16-Zoro.jpg">Zoro</option>
+                <option value="./images/walls/17-HxH.jpg">Gon</option>
+                <option value="./images/walls/18-ichigo.jpeg">Ichigo</option>
+                <option value="./images/walls/19-sharingan.png">
+                    Sharingan
+                </option>
+                <option value="./images/walls/20-thorfinn.jpg">Thorfinn</option>
+                <option value="./images/walls/21-law.jpg">Law</option>
+                <option value="./images/walls/22-Mob.jpg">Mob</option>
+                <option value="./images/walls/24-Sun.jpg">Thorfinn</option>
+                <option value="./images/walls/25-Chika.jpg">Chika</option>
+                <option value="./images/walls/23-mob.jpg">Mob</option>
+                <option value="./images/walls/26-kakashi.jpg">Kakashi</option>
+                <option value="./images/walls/27-erosen.jpg">Jiraya</option>
+                <option value="./images/walls/28-chainsawMan.jpg">Denji</option>
+                <option value="./images/walls/29-sanji.png">Sanji</option>
+                <option value="./images/walls/30-grap.png">Garp</option>
+                <option value="./images/walls/31-">AOT</option>
+                <option value="./images/walls/32-takemichi_hanagaki.jpg">
+                    Takemichi
+                </option>
+                <option value="./images/walls/33-titan.jpg">Titan</option>
+                <option value="./images/walls/34-sukuna-domain.jpg">
+                    Sukuna domain
+                </option>
+                <option value="./images/walls/35-redShot.png">redshot</option>
+                <option value="./images/walls/36-deku-MHA.jpg">deku MHA</option>
+                <option value="./images/walls/37-doflamingo.jpg">
+                    Doflamingo
+                </option>
+                <option value="./images/walls/38-chopper.jpg">Chopper</option>
+                <option value="./images/walls/39-gon-killua.jpg">
+                    Gon Killua
+                </option>
+                <option value="./images/walls/40-berserk.jpg">Berserk</option>
+                <option value="./images/walls/41-guts-battle.jpg">
+                    Guts-redEyed
+                </option>
+                <option value="./images/walls/42-haikyuu-play.jpg">
+                    Haikyuu play
+                </option>
+                <option value="./images/walls/43-serpentRoad.jpg">
+                    Serpent Road
+                </option>
+                <option value="./images/walls/44-full-metal.jpeg">
+                    Full metal alchemist
+                </option>
+                <option value="./images/walls/45-emma.jpg">
+                    Emma promised Neverland
+                </option>
+                <option value="./images/walls/46-dabi.jpg">Dabi</option>
+                <option value="./images/walls/47-boa-hancock.jpg">Boa</option>
+                <option value="./images/walls/48-gon-eyes.jpg">Gon-blue</option>
+                <option value="./images/walls/49-genshin.png">Genshin</option>
+                <option value="./images/walls/50-mha-villans.jpg">
+                    MHA-villantachi
+                </option>
+                <option value="./images/walls/51-thunder-god.jpg">
+                    Thunder God
+                </option>
+                <option value="./images/walls/52-sukuna-technique.jpeg">
+                    Sukuna shrine
+                </option>
+                <option value="./images/walls/53-shoyo.jpg">Shoyo</option>
+                <option value="./images/walls/54-shanks.jpg">Shanks</option>
+                <option value="./images/walls/55-senku-beige.jpg">Senku</option>
+                <option value="./images/walls/56-totoro-forest.jpg">
+                    Totoro
+                </option>
+                <option value="./images/walls/57-killua.jpg">Killua</option>
+                <option value="./images/walls/58-kokoshibo.jpg">
+                    Kokoshibo
+                </option>
+                <option value="./images/walls/59-black-wings.jpg">
+                    Black wings
+                </option>
+                <option value="./images/walls/60-monkey-d-luffy-surprised.jpg">
+                    Luffy
+                </option>
+                <option value="./images/walls/61-mha-class.jpg">
+                    MHA-class
+                </option>
+                <option value="./images/walls/62-ulquiorra.jpg">
+                    Ulquoirra
+                </option>
+                <option value="./images/walls/63-tree-meadow.jpg">
+                    Tree meadow
+                </option>
+                <option value="./images/walls/64-sanji-cooking.jpg">
+                    Sanji cooks
+                </option>
+                <option value="./images/walls/65-ramen.jpg">Ramen</option>
+                <option value="./images/walls/66-no-face-chihiro.jpg">
+                    No face chirhiro
+                </option>
+                <option value="./images/walls/67-natsu.jpg">Natsu</option>
+                <option value="./images/walls/68-berserk-eclise-dark.jpg">
+                    Berserk dark
+                </option>
+                <option value="./images/walls/69-berserk-eclipse.jpg">
+                    Eclipse
+                </option>
+                <option value="./images/walls/68-mouth.jpg">Mouth</option>
+                <option value="./images/walls/70-berserk-dark.jpg">
+                    Berserk dark
+                </option>
+                <option value="./images/walls/71-berserk-blue.jpg">
+                    Berserk blue
+                </option>
+                <option value="./images/walls/72-berserk-swords.jpg">
+                    Berserk swords
+                </option>
+                <option value="./images/walls/73-L-apple.jpg">L apple</option>
+                <option value="./images/walls/74-L.jpg">L</option>
+                <option value="./images/walls/75-luffy-blue.jpg">
+                    Luffy umi
+                </option>
+                <option value="./images/walls/76-no-face.jpg">No face</option>
+                <option value="./images/walls/77-yagami.jpg">yagami</option>
+                <option value="./images/walls/78-berserk-sword.png">
+                    Guts sword
+                </option>
+                <option value="./images/walls/79-COE.jpg">
+                    Classroom of elite
+                </option>
+                <option value="./images/walls/80-mushishi.jpg">Mushishi</option>
+                <option value="./images/walls/81-mushishi2.jpg">
+                    Mushishi
+                </option>
+                <option value="./images/walls/82-tatami-galaxy.jpg">
+                    Tatami galaxy
+                </option>
+                <option value="./images/walls/83-tatami.jpg">
+                    Tatami Abstract
+                </option></select
+            ><br />
+            <!-- Timer notification sound selection -->
+            <label id="text" for="sound">Notification:</label>
+            <select id="sound">
+                <option value="./audio/21-dandadan.mp3">dan da dan</option>
+                <option value="./audio/1-KICK-BACK.mp3">Kick Back</option>
+                <option value="./audio/2-Zankyou Sanka.mp3">Zankyou</option>
+                <option value="./audio/3-SPECIALZ.mp3">Specialz</option>
+                <option value="./audio/4-bleach espada.mp3">Espada</option>
+                <option value="./audio/5-My Deer Friend Nokotan.mp3">
+                    Nokotan
+                </option>
+                <option value="./audio/6-YOASOBI.mp3">Yoasobi</option>
+                <option value="./audio/7-Demon Slayer - OP.mp3">
+                    Demon Slayer Opening
+                </option>
+                <option value="./audio/8-jiraya.mp3">Erosen</option>
+                <option value="./audio/9-drums of Libearation.mp3">
+                    Drums of Liberation
+                </option>
+                <option value="./audio/10-unravel.mp3">Unravel</option>
+                <option value="./audio/11-bluebird.mp3">Blue bird</option>
+                <option value="./audio/12-mash.mp3">Mash</option>
+                <option value="./audio/13-Hikarunara.mp3">Hikarunara</option>
+                <option value="./audio/14-we are redroc.mp3">
+                    We are, redroc
+                </option>
+                <option value="./audio/15-daddy daddy do.mp3">
+                    Daddy daddy do
+                </option>
+                <option value="./audio/16-shamisen.mp3">Shamisen</option>
+                <option value="./audio/17-strong and strike.mp3">
+                    Strong and strike
+                </option>
+                <option value="./audio/18-Binks' Sake.mp3">Bink's Sake</option>
+                <option value="./audio/19-Renai Circulation.mp3">
+                    Renai Circulation
+                </option>
+                <option value="./audio/20-we are.mp3">We are</option>
+            </select>
+            <br />
+            <div class="container">
+                <button class="button" id="applaybtn" onclick="applySettings()">
+                    Apply
+                </button>
+            </div>
+            <button id="closebtn" onclick="closeSettings()">ㄨ</button>
+        </div>
+
+        <!-- Notification Div -->
+        <div id="notificationPopup">Timer has finished!</div>
+
+        <!-- Stop sound button (initially hidden) -->
+        <button
+            id="stopSoundBtn"
+            style="display: none"
+            onclick="stopNotificationSound()"
+        >
+            <img src="images/mute.svg" class="tabicons">
+        </button>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" onclick="toggleFullscreen()">⛶</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
